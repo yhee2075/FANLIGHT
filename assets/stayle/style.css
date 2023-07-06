@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h1.logo {
+  height: 60px;
+}
+
+h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1 a img {
+  display: block;
+  height: 100%;
+}
+
+nav ul.flex-box {
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+nav ul li a:hover {
+  color: gray;
+  transition: 0.5s;
+}
+
+button {
+  flex-direction: column;
+  width: 60px;
+  height: 40px;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+button span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+}
+
+.visual {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.visual video {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.visual .ticket {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 95%;
+  max-width: 1500px;
+  height: 80vh;
+  z-index: 50;
+}
+
+.visual .ticket .ticket-left {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.visual .ticket .ticket-left img {
+  width: 20%;
+  height: 20%;
+}
+
+.visual .barcode {
+  background: red url(/assets/image/Barcode.webp) no-repeat center/60% 90%;
+  width: 15%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.visual .ticket .ticket-left .ticket-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 20%;
+  font-size: 40px;
+}
+
+.visual .ticket .ticket-left .ticket-title img {
+  width: auto;
+  height: 100%;
+}
+
+.visual .ticket .ticket-left .ticket-main {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  height: 90%;
+  padding-left: 20px;
+}
+
+.ticket-main ul {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  gap: 20px;
+}
+
+.ticket-main p {
+  width: 100%;
+  height: 60%;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.ticket-right {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #fff;
+}
+
+.ticket-left .ticket-main .ticket-bottom {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.ticket-left .ticket-main .ticket-bottom img {
+  width: 15%;
+  height: 100%;
+}
+
+.ticket .ticket-right {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  padding-left: 0;
+}
+
+.ticket .ticket-right img {
+  display: block;
+  width: 100%;
+  height: 69px;
+}
+
+.ticket .ticket-right ul {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10%;
+  height: 60%;
+  padding-top: 20px;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.ticket .ticket-right ul li a:hover {
+  text-decoration: underline solid 3px;
+}
+
+.ticket .ticket-right button {
+  width: 100%;
+  height: 20%;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10%;
+  background-color: red;
+}
+
+.ticket .ticket-right button p {
+  color: #fff;
+  font-size: 30px;
+}
+
+.ticket .ticket-right button img {
+  width: 20%;
+  height: auto;
+}
+
+.project {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  color: #fff;
+}
+
+.bts {
+  background: url(/assets/image/back-bts.png) no-repeat;
+  background-size: cover;
+}
+
+.exo {
+  background: url(/assets/image/back-exo.png) no-repeat;
+  background-size: cover;
+}
+
+.taemin {
+  background: url(/assets/image/back-taemin.png) no-repeat;
+  background-size: cover;
+}
+
+.project-font-large {
+  font-size: 10vh;
+  font-weight: bold;
+}
+
+.text {
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.project a {
+  position: relative;
+  top: -20%;
+  padding: 15px;
+  border: #fff solid 3px;
+  color: #fff;
+}
+
+.project a:hover {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+}
