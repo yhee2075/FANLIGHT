@@ -15,7 +15,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -56,7 +56,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: gray;
+  color: red;
   transition: 0.5s;
 }
 
@@ -266,8 +266,12 @@ button span {
   background-size: cover;
 }
 
-.project-font-large {
-  font-size: 8vw;
+.project p {
+  font-size: 2.5vw;
+}
+
+.project .text .project-font-large {
+  font-size: 6vw;
   font-weight: bold;
 }
 
@@ -283,13 +287,55 @@ button span {
   padding: 1%;
   border: #fff solid 3px;
   color: #fff;
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 .project a:hover {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.7);
   font-weight: bold;
+}
+
+footer {
+  justify-content: space-between;
+  height: 150px;
+  padding: 1%;
+  background-color: #000;
+  color: #fff;
+}
+
+footer .footer-center {
+  justify-content: space-around;
+  width: 70%;
+  font-size: 1vw;
+  color: gray;
+}
+
+footer .footer-right {
+  justify-content: flex-end;
+  height: 100%;
+}
+
+footer .footer-right select {
+  appearance: none;
+  width: 50%;
+  text-align: center;
+  padding: 0.1vw;
+  font-size: 1vw;
+  border-color: #000;
+  background-color: #000;
+  color: gray;
+}
+
+footer .footer-right select:hover {
+  color: #fff;
+  transition: 0.3s;
+}
+
+footer .footer-right select option {
+  font-size: 1vw;
+  background-color: #000;
+  color: gray;
 }
 
 @media (max-width: 768px) {
