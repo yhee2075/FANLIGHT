@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="/assets/stayle/style.css" />
   </head>
   <body>
-    <header>
+    <header class="flex-box">
+      <h1 class="logo">
+        <a href="#">
+          <img src="/assets/image/logo.png" alt="" />
+        </a>
+      </h1>
       <nav class="flex-box">
-        <h1 class="logo">
-          <a href="#">
-            <img src="/assets/image/logo.png" alt="" />
-          </a>
-        </h1>
         <ul class="flex-box">
           <li><a href="#">ABOUT US</a></li>
           <li><a href="#">OUR STORY</a></li>
@@ -22,12 +22,12 @@
           <li><a href="#">OUR PROJECTS</a></li>
           <li><a href="#">OUR SERVICE</a></li>
         </ul>
-        <button type="button" class="flex-box">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
+      <button type="button" class="flex-box" id="moBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </header>
     <div class="visual flex-box">
       <video src="/assets/file.mp4" autoplay muted loop></video>
@@ -139,3 +139,4 @@
     </div>
   </footer>
 </html>
+<script src="/assets/js/main.js"></script>

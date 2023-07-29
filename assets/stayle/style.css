@@ -15,13 +15,14 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
+  justify-content: space-between;
+  height: 70px;
+  padding: 1%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 nav {
-  justify-content: space-between;
   width: 100%;
-  height: 70px;
   padding: 10px;
   padding-left: 2vw;
   padding-right: 2vw;
@@ -35,6 +36,7 @@ h1 {
 h1 a {
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
 }
 
@@ -43,7 +45,7 @@ h1 a img {
   width: 100%;
 }
 
-nav ul.flex-box {
+nav ul {
   width: 100%;
   justify-content: space-between;
   padding-left: 10px;
@@ -61,19 +63,7 @@ nav ul li a:hover {
 }
 
 button {
-  flex-direction: column;
-  width: 60px;
-  height: 40px;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-button span {
-  display: block;
-  width: 5vh;
-  height: 4vh;
-  min-width: 100%;
-  background-color: #fff;
+  display: none;
 }
 
 .visual {
@@ -229,8 +219,10 @@ button span {
   height: 20%;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   border-radius: 15px;
-  padding: 10%;
+  padding: 8%;
+  gap: 10px;
   background-color: red;
 }
 
@@ -296,29 +288,53 @@ button span {
   font-weight: bold;
 }
 
-footer {
+footer.flex-box {
   justify-content: space-between;
+  align-items: flex-start;
   height: 150px;
   padding: 1%;
+  padding-top: 2%;
   background-color: #000;
   color: #fff;
 }
 
+.footer-left {
+  width: 20%;
+  height: auto;
+  min-width: 150px;
+}
+
+.footer-left img {
+  width: 100%;
+  height: auto;
+}
+
 footer .footer-center {
   justify-content: space-around;
+  align-items: flex-start;
   width: 70%;
+  height: 100%;
   font-size: 1vw;
   color: gray;
 }
 
+footer .footer-center ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+
 footer .footer-right {
   justify-content: flex-end;
-  height: 100%;
+  align-items: flex-start;
+  height: 50%;
+  width: 20%;
 }
 
 footer .footer-right select {
   appearance: none;
   width: 50%;
+  min-width: 80px;
   text-align: center;
   padding: 0.1vw;
   font-size: 1vw;
@@ -340,16 +356,51 @@ footer .footer-right select option {
 
 @media (max-width: 768px) {
   nav {
+    position: fixed;
+    right: -100%;
+    top: 70px;
     height: 100%;
+    width: 30%;
+    transition: 0.5s;
+    flex-direction: column;
+    padding: 0;
   }
-
-  h1 {
-    height: 100%;
-    width: auto;
+  nav ul.flex-box {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: normal;
+    gap: 20px;
+    background-color: #000;
   }
 
   nav ul li {
-    display: none;
+    width: 100%;
+  }
+
+  nav ul li a {
+    font-size: 3vw;
+  }
+
+  h1 {
+    height: 50px;
+    width: auto;
+  }
+
+  button {
+    flex-direction: column;
+    width: 50px;
+    height: 40px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  button span {
+    display: block;
+    width: 100%;
+    height: 4vh;
+    min-width: 100%;
+    background-color: #fff;
   }
 
   .visual {
@@ -375,6 +426,7 @@ footer .footer-right select option {
   }
   .visual .ticket .ticket-left .ticket-main .ticket-title {
     width: 100%;
+    padding-top: 3%;
   }
 
   .visual .ticket .ticket-left .ticket-main .ticket-title img {
@@ -447,7 +499,7 @@ footer .footer-right select option {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 2%;
+    padding-left: 5%;
     width: 100%;
   }
   .ticket .ticket-right ul li {
@@ -462,15 +514,30 @@ footer .footer-right select option {
     padding-right: 5%;
     margin-bottom: 5%;
     margin-top: 2%;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
   }
 
   .ticket .ticket-right button img {
-    height: 90%;
+    height: 80%;
     width: auto;
   }
 
   .project {
     display: none;
   }
+
+  footer.flex-box {
+    padding-top: 5%;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+  }
+}
+
+nav.on {
+  right: 0;
 }
