@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
     <title>Document</title>
     <link rel="stylesheet" href="/assets/stayle/normalize.css" />
     <link rel="stylesheet" href="/assets/stayle/style.css" />
@@ -110,8 +111,19 @@
   <footer class="flex-box">
     <div class="footer-left">
       <img src="/assets/image/footer 로고.webp" alt="" />
+      <div class="select">
+        <select name="familysite" onchange="window.open(this.value)">
+          <option value="#">FAMILY SITE</option>
+          <option value="https://fanslike.io/">FANSLIKE</option>
+        </select>
+        <select name="language" id="select">
+          <option>한국어</option>
+          <option>일본어</option>
+          <option>영어</option>
+        </select>
+      </div>
     </div>
-    <div class="footer-center flex-box">
+    <div class="footer-right flex-box">
       <ul>
         <li>(주)팬라이트</li>
         <li>서울특별시 강남구 논현로 128길 22</li>
@@ -125,17 +137,6 @@
         <li>통신파매업신고 : 2019-서울강남-03945</li>
         <li>대표이사 : 최경일</li>
       </ul>
-    </div>
-    <div class="footer-right flex-box">
-      <select name="familysite" onchange="window.open(this.value)">
-        <option value="#">FAMILY SITE</option>
-        <option value="https://fanslike.io/">FANSLIKE</option>
-      </select>
-      <select name="language" id="select">
-        <option>한국어</option>
-        <option>일본어</option>
-        <option>영어</option>
-      </select>
     </div>
   </footer>
 </html>
