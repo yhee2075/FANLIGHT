@@ -30,7 +30,7 @@ nav {
 
 h1 {
   width: 20vw;
-  min-width: 50px;
+  min-width: 20px;
 }
 
 h1 a {
@@ -355,23 +355,30 @@ footer .footer-right select option {
 }
 
 @media (max-width: 768px) {
-  nav {
+  nav.flex-box {
     position: fixed;
-    right: -100%;
+    right: 0;
     top: 70px;
     height: 100%;
-    width: 30%;
+    width: 100%;
     transition: 0.5s;
-    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     padding: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
   }
+
   nav ul.flex-box {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: normal;
+    width: 30%;
+    background-color: black;
+    height: 100vw;
     gap: 20px;
-    background-color: #000;
+    padding-top: 10%;
   }
 
   nav ul li {
@@ -383,8 +390,9 @@ footer .footer-right select option {
   }
 
   h1 {
-    height: 50px;
-    width: auto;
+    height: auto;
+    width: 50%;
+    max-width: 50px;
   }
 
   button {
@@ -411,7 +419,7 @@ footer .footer-right select option {
   .visual .ticket {
     flex-direction: column;
     height: 90%;
-    width: 60%;
+    width: 90%;
   }
 
   .visual .ticket .ticket-left {
@@ -539,5 +547,5 @@ footer .footer-right select option {
 }
 
 nav.on {
-  right: 0;
+  opacity: 1;
 }
